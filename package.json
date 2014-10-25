@@ -1,0 +1,24 @@
+{
+  "name": "vue-firebase",
+  "version": "0.0.1",
+  "description": "Firebase bindings for Vue.js view-model data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/agonbina/vue-firebase.git"
+  },
+  "keywords": [
+    "firebase",
+    "vue.js",
+    "vue"
+  ],
+  "author": "Agon Bina <agon_bina@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/agonbina/vue-firebase/issues"
+  },
+  "homepage": "https://github.com/agonbina/vue-firebase"
+}
