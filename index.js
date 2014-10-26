@@ -4,22 +4,16 @@
  * @type {exports}
  */
 
-var Vue = require('vue');
-var Fire = Vue.extend({
-    ready: function() {
-        var $vm = this;
-        var ref = $vm.$options.firebase;
+var Fire = require('./lib/fire');
 
-        ref.on('child_added', function (snap) {
-            var data = snap.val();
+module.exports = {
+    compiled: function() {
+        var vm = this;
+        var config = vm.$options.fb;
+        var fb = new Fire(vm);
 
-        });
+        fb.setObject(config.path, config.ref);
+
+        vm.$fb = fb;
     }
-});
-
-var ref = new Firebase('https://ovally.firebaseio.com');
-var myVm = new Fire({
-    firebase: ref.child('ovals')
-});
-
-myVm.$mount('#app');
+};
