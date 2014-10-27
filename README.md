@@ -50,3 +50,5 @@ vm.$mount(body);
 
 ### .ref(path|String)
   Retrieve the Firebase ```ref``` instance specified in ```fb``` or during a ```.set*``` operation.
+  Note: If the reference is a Firebase Query, ```.ref(path)``` will still return the reference to
+  ```firebaseUrl/**path**``` and not the query instance that was passed in
