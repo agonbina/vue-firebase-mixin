@@ -14,9 +14,6 @@ module.exports = {
 
         fb.setObject(config.path, config.ref);
 
-        var ovalsRef = new Firebase('https://ovally.firebaseio.com/ovals');
-        fb.setArray('ovals', ovalsRef);
-
         vm.$fb = fb;
     }
 };
