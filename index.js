@@ -33,7 +33,7 @@ module.exports = {
         var refs = fb.arrays.concat(fb.values);
 
         refs.forEach(function (ref) {
-            var path = ref.ref().name();
+            var path = ref.ref().key();
             vm.$fb.remove(path);
         });
     }

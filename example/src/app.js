@@ -6,7 +6,7 @@ module.exports = {
 
   fb: {
     arrays: [
-      ref.child('people').orderByChild('age').limitToFirst(1) // Youngest person out of all in the list
+      ref.child('people').orderByChild('age').limitToFirst(2) // Youngest two people out of all in the list
     ],
     values: [
       ref.child('presence'),
