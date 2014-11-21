@@ -1,11 +1,11 @@
 {
   "name": "vue-firebase-mixin",
-  "version": "0.0.1",
-  "description": "Vue.js mixin for Firebase $data bindings",
+  "version": "0.1.0",
+  "description": "A mixin which enables syncing $data of a Vue.js view model with a Firebase reference.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/agonbina/vue-firebase.git"
+    "url": "git@github.com:agonbina/vue-firebase-mixin.git"
   },
   "keywords": [
     "firebase",
