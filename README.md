@@ -1,12 +1,10 @@
 vue-firebase
 ============
-**WIP - Expect breaking changes until it reaches 0.1**
-
+A mixin which enables syncing $data of a Vue.js view model with a Firebase reference.
 
 ## Usage
-Currently only available on NPM, which means you can use it with Browserify.
 ```
-npm install -S vue-firebase-mixin
+npm install --save vue-firebase-mixin
 ```
 
 ## Example
@@ -14,7 +12,7 @@ npm install -S vue-firebase-mixin
 var firebaseMixin = require('vue-firebase-mixin');
 var ref = new Firebase('https://your-firebase.firebaseio.com');
 
-var vm = new Vue({
+var app = new Vue({
   mixins: [ firebaseMixin ],
   template: '<ul>' +
               '<li v-repeat="people">{{name}} : {{age}}</li>' +
@@ -30,17 +28,18 @@ var vm = new Vue({
   }
 });
 
-vm.$mount(body);
+app.$mount('#app');
 ```
+This mixin attaches a ```$fb``` property on the view model, which has the following API:
 
 ## API for vm.$fb
 
 ### .setValue(ref|Firebase)
-  Creates a new keypath in ```$data``` with the ```.name()``` of the Firebase ```ref```.
+  Creates a new keypath in ```$data``` with the ```.key()``` of the Firebase ```ref```.
   Attaches a listener on the ```'value'``` event and updates the value stored in the keypath.
 
 ### .setArray(ref|Firebase)
-  Creates an array with the reference name (i.e. keypath) in $data and attaches listeners
+  Creates an array with the reference key in $data and attaches listeners
   on the Firebase list events(child_added, child_removed, child_moved, child_changed).
 
 ### .remove(path|String, [ removeLocal|Boolean ])
@@ -49,6 +48,6 @@ vm.$mount(body);
   If ```removeLocal``` is set to ```true```, it ```$delete```s the keypath from the view model.
 
 ### .ref(path|String)
-  Retrieve the Firebase ```ref``` instance specified in ```fb``` or during a ```.set*``` operation.
+  Retrieve the Firebase ```ref``` instance previously specified in ```fb``` or during a ```.set*``` operation.
   Note: If the reference is a Firebase Query, ```.ref(path)``` will still return the reference to
-  ```firebaseUrl/**path**``` and not the query instance that was passed in
+  ```firebaseUrl/**path**``` and not the query instance that was passed in.
