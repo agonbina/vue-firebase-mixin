@@ -3,8 +3,6 @@
   "version": "0.0.1",
   "description": "Vue.js mixin for Firebase $data bindings",
   "main": "index.js",
-  "scripts": {
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/agonbina/vue-firebase.git"
@@ -20,5 +18,10 @@
     "url": "https://github.com/agonbina/vue-firebase-mixin/issues"
   },
   "homepage": "https://github.com/agonbina/vue-firebase-mixin",
-  "dependencies": {}
+  "devDependencies": {
+    "vue": "0.11.x",
+    "webpack": "^1.4.10",
+    "jade-html-loader": "0.0.2",
+    "html-loader": "^0.2.3",
+    "jade": "^1.7.0"}
 }

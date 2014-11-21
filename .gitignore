@@ -1,5 +1,7 @@
-# IDEs
+# Other 
 .idea
+example/build
+
 
 # Logs
 logs
