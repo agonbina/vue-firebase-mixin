@@ -8,7 +8,7 @@ var Fire = require('./lib/fire');
 module.exports = {
     beforeCompile: function () {
         var vm = this;
-        var fb = vm.$options.fb;
+        var fb = vm.$options.fb || {};
         var arrays = fb.arrays = fb.arrays || [];
         var values = fb.values = fb.values || [];
 
