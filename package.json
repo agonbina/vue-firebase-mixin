@@ -1,6 +1,6 @@
 {
   "name": "vue-firebase-mixin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A mixin which enables syncing $data of a Vue.js view model with a Firebase reference.",
   "main": "index.js",
   "repository": {
