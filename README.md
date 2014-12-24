@@ -1,5 +1,7 @@
 vue-firebase
 ============
+NOTE: no longer maintained, use [vue-fire](https://github.com/agonbina/vue-fire) instead.
+
 A mixin which enables syncing $data of a Vue.js view model with a Firebase reference.
 
 ## Usage
